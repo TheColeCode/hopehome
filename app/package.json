@@ -30,5 +30,13 @@
     "express": "^4.16.4",
     "node-fetch": "^2.3.0",
     "react-router-dom": "^5.0.0"
+  },
+  "devDependencies": {
+    "module-alias": "^2.2.0"
+  },
+  "_moduleAliases": {
+    "root": ".",
+    "routes": "./server/routes",
+    "server": "./server"
   }
 }
