@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../App.css';
+// import { Link } from 'react-router-dom';
 
-class Home extends Component {
+class Page extends Component {
   constructor(props) {
     super(props);
 
@@ -18,15 +18,15 @@ class Home extends Component {
   };
 
   callApi = async (id) => {
-    return await fetch('/api/home')
+    return await fetch('/api/page/' + id)
     .then(res => res.json())
     .then(data => {
       console.log(data.express);
       if(data.express.status === 'publish') {
         this.setState({
           id: data.express.id,
-          title: data.express.title.rendered,
-          content: data.express.content.rendered
+          title: data.express.title,
+          content: data.express.content,
         })
       }
 
@@ -41,19 +41,18 @@ class Home extends Component {
 
 
   render() {
-
-  let Page = (
+  let Content = (
       <div key={this.state.id}>
         <h1>{this.state.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: this.state.content }} />
+        <div>{this.state.content}</div>
       </div>
   );
     return (
       <div className="page">
-        <div>{Page}</div>
+        <div>{Content}</div>
       </div>
     );
   }
 }
 
-export default Home;
+export default Page;
