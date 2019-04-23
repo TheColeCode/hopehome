@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
-import logo from '../logo.svg';
+import Header from './Header';
+import Banner from './Banner';
 import '../App.css';
 
 class Home extends Component {
@@ -23,11 +23,9 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p className="App-intro">{this.props.content}</p>
-        </header>
+      <div className="Container">
+        <Header />
+        <Banner />
       </div>
     );
   }
