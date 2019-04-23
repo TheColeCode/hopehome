@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 module.exports = (app) => {
     app.get('/api/page', (req, res) => {
-        Const id = req.query.id;
+        const id = req.query.id || '';
         const baseUrl = 'http://hopehome.jonuday.com/wp/wp-json/wp/v2/pages/id';
         const apiUrl = baseUrl + id;
 

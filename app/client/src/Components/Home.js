@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import Header from './Header';
-import Banner from './Banner';
 import '../App.css';
-=======
-// import { Link } from 'react-router-dom';
->>>>>>> df3c4ae9... Add routing and fetch calls for API
 
 class Home extends Component {
   constructor(props) {
@@ -56,14 +49,8 @@ class Home extends Component {
       </div>
   );
     return (
-<<<<<<< HEAD
-      <div className="Container">
-        <Header />
-        <Banner />
-=======
       <div className="page">
         <div>{Page}</div>
->>>>>>> df3c4ae9... Add routing and fetch calls for API
       </div>
     );
   }
