@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
+import React from 'react';
 import image from '../Assets/banner.jpg';
 import CallToAction from './CallToAction';
+import '../Styles/Banner.css';
 
 const Banner = () => {
   return (
-    <div>
-      <img id="bannerImage" src={image} alt="Gathiga Banner" style={{position: 'relative', top: '85px', width:'100vw' }} />
+    <div className="Banner">
+      <img id="bannerImage" src={image} alt="Gathiga Banner" />
       <CallToAction />
     </div>
   );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 
 class Page extends Component {
   constructor(props) {
@@ -14,7 +13,8 @@ class Page extends Component {
 
   componentDidMount() {
     // Call our fetch function below once the component mounts
-    this.callApi();
+    console.log(this.props.id);
+    this.callApi(this.props.id);
   };
 
   callApi = async (id) => {

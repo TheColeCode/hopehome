@@ -1,0 +1,14 @@
+.Navbar {
+    border: 0;
+}
+
+.Navbar ul {
+    display: inline-flex;
+    align-items: center; 
+    list-style: none;
+}
+
+.Navbar a {
+    display: inline-block;
+    margin: 10px 1em;
+}
