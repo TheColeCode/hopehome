@@ -12,7 +12,7 @@ class Button extends Component {
     };
 
     return (
-      <Link style={Button}>Donate</Link>
+      <Link to="/" style={Button}>Donate</Link>
     );
   }
 }
