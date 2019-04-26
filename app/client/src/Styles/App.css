@@ -21,8 +21,19 @@ a {
   text-decoration: none;
 }
 
+.Header {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  width: 100vw;
+  background-color: #292d2a;
+}
 .Header a {
   color: #fff;
+}
+.Header .Logo {
+  padding: 1em;
 }
 
 .Footer a {

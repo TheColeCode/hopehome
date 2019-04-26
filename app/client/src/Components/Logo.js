@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
 
 const Logo = () => {
   const Logo = {
@@ -12,7 +11,7 @@ const Logo = () => {
   };
 
   return (
-    <h1>
+    <h1 className="Logo">
       <Link to="/" style={Logo}>Hope Home</Link>
     </h1>
   );

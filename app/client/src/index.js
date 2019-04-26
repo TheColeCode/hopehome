@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './Styles/index.css';
 import App from './App';
-import Home from './Components/Home';
 
-import Page from './Components/Page';
+import Home from './Views/Home';
+import Page from './Views/Page';
 // import Children from './Components/Children';
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
@@ -15,7 +16,7 @@ ReactDOM.render(
       <App>
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route exact path='/about' component={Page} id={3}/>
+          <Route exact path='/about' render={(props) => <Page {...props} id={2} />}/>
         </Switch>
 	    </App>
     </Router>

@@ -26,6 +26,7 @@
   "homepage": "https://github.com/TheColeCode/hopehome#readme",
   "dependencies": {
     "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
     "es6-promise": "^4.2.6",
     "express": "^4.16.4",
     "node-fetch": "^2.3.0",

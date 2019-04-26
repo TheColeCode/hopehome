@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
 
 class Button extends Component {
   render() {
@@ -13,7 +12,7 @@ class Button extends Component {
     };
 
     return (
-      <Link style={Button}>Donate</Link>
+      <Link to="/" style={Button}>Donate</Link>
     );
   }
 }

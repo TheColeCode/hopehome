@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Navbar from './Navbar';
-import '../App.css';
+import Logo from './Logo';
 
 const Header = () => {
   return (
       <header className="Header">
+        <Logo />
         <Navbar className="Navigation" />
       </header>
   );

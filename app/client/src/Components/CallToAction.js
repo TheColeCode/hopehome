@@ -1,7 +1,4 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
-import image from '../Assets/banner.jpg';
+import React from 'react';
 import Button from './Button';
 
 const CallToAction = () => {
@@ -20,12 +17,12 @@ const CallToAction = () => {
 
   const HeadingBlurb = {
     fontSize: '3em',
-    margin: '2rem 0'
+    margin: '1rem 0'
   };
 
   const Blurb = {
     fontSize: '2em',
-    margin: '2rem 0'
+    margin: '1rem 0 2rem'
   };
 
   return (
@@ -33,7 +30,7 @@ const CallToAction = () => {
       <div style={Blurbs}>
         <h2 style={HeadingBlurb}>Discover the Impact</h2>
         <h4 style={Blurb}>Volunteer in Kenya at Hope Home</h4>
-        {/* <Button /> */}
+        <Button />
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 
 class Page extends Component {
   constructor(props) {
@@ -14,19 +13,19 @@ class Page extends Component {
 
   componentDidMount() {
     // Call our fetch function below once the component mounts
-    this.callApi();
+    this.callApi(this.props.id);
   };
 
   callApi = async (id) => {
     return await fetch('/api/page/' + id)
     .then(res => res.json())
     .then(data => {
-      console.log(data.express);
+      console.log(data);
       if(data.express.status === 'publish') {
         this.setState({
           id: data.express.id,
-          title: data.express.title,
-          content: data.express.content,
+          title: data.express.title.rendered,
+          content: data.express.content.rendered,
         })
       }
 
