@@ -5,6 +5,7 @@ import App from './App';
 
 import Home from './Views/Home';
 import Page from './Views/Page';
+import Posts from './Views/Posts';
 // import Children from './Components/Children';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/about' render={(props) => <Page {...props} id={2} />}/>
+          <Route exact path='/post/' render={(props) => <Posts {...props} id={1} />}/>
         </Switch>
 	    </App>
     </Router>
