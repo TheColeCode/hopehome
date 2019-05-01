@@ -4,14 +4,14 @@ import Button from './Button';
 import '../Styles/Navbar.css';
 
 const Navbar = () => {
-  
+
   return (
     <div className="Navbar">
       <nav>
         <ul>
-          <li><Link to="/" title="Volunteer">Volunteer</Link></li>
-          <li><Link to="/" title="Children">Children</Link></li>
           <li><Link to="/about" title="About">About</Link></li>
+          <li><Link to="/volunteer" title="Volunteer">Volunteer</Link></li>
+          <li><Link to="/children" title="Children">Children</Link></li>
           <Button />
         </ul>
       </nav>
