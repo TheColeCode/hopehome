@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ChildExcerpt from '../Components/ChildExcerpt';
 
 class Children extends Component {
   constructor(props) {
@@ -11,7 +12,6 @@ class Children extends Component {
   }
 
   componentDidMount() {
-    // Call our fetch function below once the component mounts
     this.callApi();
   };
 
@@ -19,7 +19,6 @@ class Children extends Component {
     return await fetch('/api/children/')
     .then(res => res.json())
     .then(data => {
-      console.log(data);
       let contentAsArray = Array.from(data.express);
       this.setState({
         content: contentAsArray,
@@ -36,20 +35,19 @@ class Children extends Component {
   }
   render() {
     let list = this.state.content.map((child, index) => {
-      return (
-        <div key={child.id}>
-          <h1>{child.title.rendered }</h1>
-          <p dangerouslySetInnerHTML={{ __html: child.excerpt.rendered }} />
-          <div className="full">
-            <p dangerouslySetInnerHTML={{ __html: child.content.rendered }} />
-          </div>
 
-        </div>
+      return (
+        <ChildExcerpt 
+          key={child.id} 
+          title={child.title.rendered} 
+          excerpt={child.excerpt.rendered} 
+          thumb={ child.featured_media } 
+        />
       )
     });
 
     return (
-      <div className="page">
+      <div className="children">
         <h1>Children</h1>
         <div>{list}</div>
       </div>

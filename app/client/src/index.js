@@ -19,7 +19,7 @@ ReactDOM.render(
           <Route exact path='/' component={Home}/>
           <Route exact path='/about' render={(props) => <Page {...props} id={2} />}/>
           <Route exact path='/post/' render={(props) => <Posts {...props} id={1} />}/>
-          <Route exact path='/children' />
+          <Route exact path='/children' component={Children} />
         </Switch>
 	    </App>
     </Router>
